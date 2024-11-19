@@ -59,6 +59,7 @@ export function AppSidebar() {
                       onClick={() => {
                         changePage(item.url);
                       }}
+                      className="cursor-pointer"
                     >
                       <item.icon />
                       <span>{item.title}</span>
