@@ -20,8 +20,8 @@ const items = [
     icon: Home,
   },
   {
-    title: "Inbox",
-    url: "Inbox",
+    title: "Messages",
+    url: "Messages",
     icon: Inbox,
   },
   {
@@ -51,10 +51,13 @@ export function AppSidebar() {
             <img src="vite.svg" className="w-[30px]"></img> Application
           </SidebarGroupLabel>
           <SidebarGroupContent className="mt-10">
-            <SidebarMenu className="gap-y-3 ml-5">
+            <SidebarMenu className="gap-y-3 ">
               {items.map((item) => (
                 <SidebarMenuItem key={item.title}>
-                  <SidebarMenuButton asChild>
+                  <SidebarMenuButton
+                    asChild
+                    className="hover:bg-slate-500 hover:text-white"
+                  >
                     <div
                       onClick={() => {
                         changePage(item.url);
